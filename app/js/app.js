@@ -9,7 +9,7 @@ require('angular-route');
 
 var app = angular.module('todoApp', [ 'ngRoute' ]);
 
-app.constant('VERSION', require('../../package.json').version);
+app.constant('VERSION', require('../package.json').version);
 
 require('./service');
 require('./controller');

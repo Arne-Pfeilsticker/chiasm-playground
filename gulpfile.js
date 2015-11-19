@@ -15,9 +15,10 @@ var gulpPlugins = require('gulp-load-plugins')({
 
 // Define file path variables
 var paths = {
-  root: 'app/',      // App root path
+  root: './',        // Project root path
+  app:  'app/',      // App root path
   src:  'app/js/',   // Source path
-  dist: 'app/dist/', // Distribution path
+  dist: 'dist/',     // Distribution path
   test: 'test/',     // Test path
 };
 
@@ -125,7 +126,7 @@ gulp.task('karma', ['browserify-tests'], function () {
 
 gulp.task('server', ['browserify'], function () {
   gulpPlugins.connect.server({
-    root: 'app',
+    root: paths.app,
     livereload: liveReload,
   });
 });

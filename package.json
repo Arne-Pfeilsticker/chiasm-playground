@@ -2,7 +2,7 @@
   "name": "chiasm-playground",
   "version": "0.0.1",
   "description": "My playground to combine Chiasm with AngularJS, Angular Material, browserify, gulp, etc.",
-  "repository": "",
+  "repository": "https://github.com/Arne-Pfeilsticker/chiasm-playground",
   "author": "Arne Pfeilsticker",
   "license": "MIT",
   "scripts": {
