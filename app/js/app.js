@@ -7,9 +7,9 @@ require('jquery');
 var angular = require('angular');
 require('angular-route');
 
-var app = angular.module('todoApp', [ 'ngRoute' ]);
+var app = angular.module('chiasmApp', [ 'ngRoute' ]);
 
-app.constant('VERSION', require('../package.json').version);
+app.constant('VERSION', require('../../package.json').version);
 
 require('./service');
 require('./controller');

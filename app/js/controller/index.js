@@ -1,6 +1,6 @@
 'use strict';
 
-var app = require('angular').module('todoApp');
+var app = require('angular').module('chiasmApp');
 
 app.controller('EditTodoCtrl', require('./edit_todo'));
 app.controller('FooterCtrl', require('./footer'));
