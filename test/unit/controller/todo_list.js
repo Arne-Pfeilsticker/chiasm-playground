@@ -3,7 +3,7 @@
 var chai = require('chai')
   , expect = chai.expect;
 
-var TodoListCtrlModule = require('../../../app/js/controller/todo_list.js');
+var TodoListCtrlModule = require('../../../app/features/controller/todo_list.js');
 
 describe('The TodoListCtrl', function() {
 
@@ -14,7 +14,7 @@ describe('The TodoListCtrl', function() {
     todo = {
       title: 'Todo',
       due: '2015-02-13',
-      text: 'Do it',
+      text: 'Do it'
     };
 
     $scope = {
@@ -24,7 +24,7 @@ describe('The TodoListCtrl', function() {
     };
 
     var TodoService = {
-      getTodos: function() {},
+      getTodos: function() {}
     };
 
     TodoListCtrlModule($scope, TodoService);
