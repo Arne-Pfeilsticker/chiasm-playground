@@ -5,6 +5,5 @@ node_modules
 *.swp
 *.un~
 
-app/ngmin
-ngAnnotate
-dist
+app/ngAnnotate
+app/dist
