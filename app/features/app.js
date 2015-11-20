@@ -11,17 +11,16 @@ var app = angular.module('chiasmApp', [ 'ngRoute' ]);
 
 app.constant('VERSION', require('../../package.json').version);
 
-require('./service');
-require('./controller');
+require('./todo-list');
 
 app.config(function($routeProvider) {
 
   $routeProvider.when('/todos', {
-    templateUrl: 'views/todos.html',
+    templateUrl: 'features/todo-list/todos.html',
     controller: 'TodoCtrl'
   })
   .when('/imprint', {
-    templateUrl: 'views/imprint.html',
+    templateUrl: 'features/todo-list/imprint.html',
     controller: 'ImprintCtrl'
   })
   .otherwise({
