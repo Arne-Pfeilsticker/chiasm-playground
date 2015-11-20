@@ -14,9 +14,10 @@ I more or less take his examples and combine them with technologies like:
 ## Technological details
 
 As a basis for this project Bastian's [angular-browserify](https://github.com/basti1302/angular-browserify) template was 
-taken. But the app will be changed from a "By Tpye" in a "By Feature" directory structure.
+taken. But the app will be changed from a "By Tpye" in a "By Feature" directory structure. 
+Bastian's suggestions are independent of the directory structure. 
 
-Bastian's suggestions are independent of the directory structure. At first glance one might think that Browserify is an 
+At first glance one might think that Browserify is an 
 Angular-killer, but Bastian makes them a perfect match. The how to is described [here](https://blog.codecentric.de/en/2014/08/angularjs-browserify/).
 
 ### Build
