@@ -6,8 +6,18 @@ require('es5-sham');
 require('jquery');
 var angular = require('angular');
 require('angular-route');
+require('angular-animate');
+require('angular-aria');
+require('angular-material');
 
-var app = angular.module('chiasmApp', ['ngRoute']);
+var app = angular.module('chiasmApp', ['ngRoute', 'ngAnimate', 'ngAria', 'ngMaterial']);
+
+app.config(['$mdThemingProvider', function ($mdThemingProvider) {
+
+    $mdThemingProvider.theme('default')
+        .primaryPalette('indigo')
+        .accentPalette('deep-orange');
+}]);
 
 app.constant('VERSION', require('../../package.json').version);
 

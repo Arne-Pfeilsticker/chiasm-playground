@@ -1,24 +1,26 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" ng-app="chiasmApp">
 
 <head>
-  <title>Chiasm Playground</title>
-  <link rel="stylesheet" href="css/normalize.css"/>
-  <link rel="stylesheet" href="css/unsemantic-grid-responsive.css"/>
-  <link rel="stylesheet" href="css/app.css"/>
+    <title>Chiasm Playground</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <!-- Angular Material CSS using GitCDN to load directly from `bower-material/master` -->
+    <link rel="stylesheet" href="https://gitcdn.xyz/repo/angular/bower-material/master/angular-material.css">
+
+    <link rel="stylesheet" href="css/app.css"/>
 </head>
 
 <body>
-<div class="content grid-container" ng-app="chiasmApp">
+<div class="content grid-container" layout="column" layout-margin layout-fill layout-padding>
+    <div flex>
+        <md-content ng-view flex layout-padding></md-content>
+    </div>
 
-  <div ng-view></div>
-
-  <div
-    ng-controller="FooterCtrl"
-    class="footer"
-    >Chiasm Playground, Version: {{version}} <a
-      href="#/imprint">[Imprint]</a>
-  </div>
+    <div ng-controller="FooterCtrl" class="footer">Chiasm Playground, Version: {{version}}
+        <a href="#/imprint">[Imprint]</a>
+    </div>
 
 </div>
 

@@ -1,63 +1,65 @@
-<div class="grid-20 grid-parent">
-    <div class="margins rounded-box text-on-blue">
-        <div class="sidebar-heading sidebar-heading-skin dark-blue-bg">Your Todos</div>
-        <div ng-controller="TodoListCtrl">
-            <a ng-repeat="todo in getTodos()"
-               ng-click="select(todo)"
-               class="sidebar-item-borders sidebar-item dark-blue-bg"
-               ng-class="getCssClass(todo)"
-            >
-                <span ng-bind="todo.title"></span>
-            </a>
+<div layout="column" layout-margin layout-fill layout-padding>
+
+    <h2 class="md-display-1">Your Todos</h2>
+
+    <div layout="row" layout-sm="column">
+
+        <!--Todo List-->
+        <div flex="20" flex-sm="100" >
+            <md-list ng-controller="TodoListCtrl" ng-cloak="">
+                <md-list-item ng-repeat="todo in getTodos()" ng-click="select(todo)" ng-class="getCssClass(todo)">
+                    <p>{{todo.title}}</p>
+                </md-list-item>
+            </md-list>
+        </div>
+
+        <!--Todo Item-->
+        <div flex ng-controller="EditTodoCtrl">
+
+            <form novalidate role="form">
+
+                <div class="margins padding rounded-box dark-blue-bg text-on-blue">
+                    <!--<div class="margins padding rounded-box dark-blue-bg text-on-blue">-->
+
+                    <div ng-show="!editMode">
+                        <h3 ng-bind="todo.title" class="current-item md-headline"></h3>
+                    </div>
+
+                    <div ng-show="editMode">
+                        <input type="text" ng-model="todo.title" class="current-item current-item-edit"/>
+                    </div>
+
+                </div>
+
+                <div class="margins padding rounded-box medium-blue-bg text-on-blue">
+                    <span>Due:</span>
+                    {{ todo.due | date : 'short' }}
+                </div>
+
+                <div ng-show="!editMode" class="margins padding rounded-box todo-text">
+                    <span ng-bind="todo.text"></span>
+                </div>
+
+                <div ng-show="editMode">
+                    <textarea ng-model="todo.text" class="margins padding todo-text todo-text-edit"></textarea>
+                </div>
+
+                <div ng-show="!editMode">
+                      <span class="span-save">
+                        <md-button ng-click="edit()" class="md-raised md-primary">Edit</md-button>
+                        <md-button ng-click="create()" class="md-raised md-primary">New</md-button>
+                        <md-button ng-click="remove()" class="md-raised md-primary">Delete</md-button>
+                      </span>
+                </div>
+
+                <div ng-show="editMode">
+                      <span class="span-save">
+                        <md-button ng-click="cancel()" class="md-raised md-primary">Cancel</md-button>
+                        <md-button ng-click="save()" class="md-raised md-primary">Save</md-button>
+                      </span>
+                </div>
+
+            </form>
         </div>
     </div>
-</div>
-
-<div ng-controller="EditTodoCtrl" class="grid-80 grid-parent">
-    <form novalidate role="form">
-
-        <div class="margins padding rounded-box dark-blue-bg text-on-blue">
-            <div ng-show="!editMode">
-                <span ng-bind="todo.title" class="current-item"></span>
-            </div>
-            <div ng-show="editMode">
-                <input
-                        type="text"
-                        ng-model="todo.title"
-                        class="current-item current-item-edit"
-                />
-            </div>
-        </div>
-
-        <div class="margins padding rounded-box medium-blue-bg text-on-blue">
-            <span>Due:</span>
-            {{ todo.due | date : 'short' }}
-        </div>
-
-        <div
-                ng-show="!editMode"
-                class="margins padding rounded-box todo-text"
-        >
-            <span ng-bind="todo.text"></span>
-        </div>
-        <div
-                ng-show="editMode"
-        >
-            <textarea ng-model="todo.text" class="margins padding todo-text todo-text-edit"></textarea>
-        </div>
-
-        <div ng-show="!editMode">
-      <span class="span-save">
-        <button ng-click="edit()" class="btn">Edit</button>
-        <button ng-click="create()" class="btn">New</button>
-        <button ng-click="remove()" class="btn">Delete</button>
-      </span>
-        </div>
-        <div ng-show="editMode">
-      <span class="span-save">
-        <button ng-click="cancel()" class="btn">Cancel</button>
-        <button ng-click="save()" class="btn">Save</button>
-      </span>
-        </div>
-    </form>
 </div>
