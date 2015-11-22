@@ -1,0 +1,49 @@
+<div ng-controller="MenuController as vm">
+    <md-toolbar class="md-menu-toolbar md-whiteframe-z2" ng-style="{background:vm.mdThemeColors.primary['50']}">
+        <div layout="row">
+            <md-toolbar-filler ng-style="{background:vm.mdThemeColors.primary.hue2}" style="margin: 0;color: white;"
+                               layout="" layout-align="center center" hide-sm>
+                <md-button ui-sref="home"
+                           aria-label="Open menu home">
+                    <h1>CP</h1>
+                </md-button>
+            </md-toolbar-filler>
+
+            <div layout-fill>
+                <h2 ng-style="{background:vm.mdThemeColors.primary.hue2}" class="md-display-1" style="margin: 0;color: white;" hide-sm layout-padding>
+                    Chiasm Playground
+                </h2>
+
+                <md-menu-bar>
+                    <button ui-sref="home">
+                        Start
+                    </button>
+                    <md-menu>
+                        <button ng-click="$mdOpenMenu($event)">
+                            Todo List
+                        </button>
+                        <md-menu-content>
+                            <md-menu-item>
+                                <md-button ui-sref="todos" aria-label="Open menu todo-list">
+                                    Your Todos
+                                </md-button>
+                            </md-menu-item>
+                        </md-menu-content>
+                    </md-menu>
+                    <md-menu>
+                        <button ng-click="$mdOpenMenu($event)">
+                            Imprint
+                        </button>
+                        <md-menu-content>
+                            <md-menu-item>
+                                <md-button ui-sref="imprint" aria-label="imprint">
+                                    Imprint
+                                </md-button>
+                            </md-menu-item>
+                        </md-menu-content>
+                    </md-menu>
+                </md-menu-bar>
+            </div>
+        </div>
+    </md-toolbar>
+</div>
