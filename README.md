@@ -15,7 +15,7 @@ I more or less take Chiasm examples and combine them with technologies like:
 * Karma
 
 Planed:
-* OrientDB (Graph database)
+* [OrientDB](http://orientdb.com/) (Graph database)
 * etc.
 
 ## Technological details

@@ -22,16 +22,21 @@
 
                     <md-menu>
                         <button ng-click="$mdOpenMenu($event)">
-                            Todo List
+                            Chiasm Examples
                         </button>
                         <md-menu-content>
                             <md-menu-item>
-                                <md-button ui-sref="todos" aria-label="Open menu todo-list">
-                                    Your Todos
+                                <md-button ui-sref="magicbarchart" aria-label="Open magic bar chart">
+                                    Magic Bar Chart
                                 </md-button>
                             </md-menu-item>
                         </md-menu-content>
                     </md-menu>
+
+                    <button ui-sref="todos" aria-label="Todos List">
+                        Todo List
+                    </button>
+
                     <button ui-sref="imprint" aria-label="imprint">
                         Imprint
                     </button>

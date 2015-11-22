@@ -83,6 +83,7 @@ require('./layout');
 require('./home');
 require('./imprint');
 require('./todo-list');
+require('./chiasm/magic-bar-chart');
 
 app.config(function ($stateProvider, $urlRouterProvider) {
     //
@@ -101,6 +102,12 @@ app.config(function ($stateProvider, $urlRouterProvider) {
                 property1: 'foo',
                 property2: 'bar'
             }
+        })
+        .state('magicbarchart', {
+            url: '/magicbarchart',
+            templateUrl: 'features/chiasm/magic-bar-chart/magic-bar-chart.html',
+            controller: 'MagicBarChartController',
+            controllerAs: 'vm'
         })
         .state('todos', {
             url: '/todos',
