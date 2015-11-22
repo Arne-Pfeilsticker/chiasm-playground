@@ -5,12 +5,12 @@ require('es5-sham');
 
 require('jquery');
 var angular = require('angular');
-require('angular-route');
+require('angular-ui-router');
 require('angular-animate');
 require('angular-aria');
 require('angular-material');
 
-var app = angular.module('chiasmApp', ['ngRoute', 'ngAnimate', 'ngAria', 'ngMaterial']);
+var app = angular.module('chiasmApp', ['ui.router', 'ngAnimate', 'ngAria', 'ngMaterial']);
 
 app.config(['$mdThemingProvider', function ($mdThemingProvider) {
 
@@ -24,17 +24,22 @@ app.constant('VERSION', require('../../package.json').version);
 require('./imprint');
 require('./todo-list');
 
-app.config(function ($routeProvider) {
+app.config(function ($stateProvider, $urlRouterProvider) {
+    //
+    // For any unmatched url, redirect to /state1
+    $urlRouterProvider.otherwise('/todos');
+    //
+    // Now set up the states
 
-    $routeProvider.when('/todos', {
+    $stateProvider.state('todos', {
+            url: '/todos',
             templateUrl: 'features/todo-list/todos.html',
             controller: 'TodoCtrl'
         })
-        .when('/imprint', {
+        .state('imprint', {
+            url: '/imprint',
             templateUrl: 'features/imprint/imprint.html',
             controller: 'ImprintCtrl'
         })
-        .otherwise({
-            redirectTo: '/todos'
-        });
+    ;
 });

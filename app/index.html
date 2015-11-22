@@ -3,6 +3,11 @@
 
 <head>
     <title>Chiasm Playground</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
@@ -13,10 +18,12 @@
 </head>
 
 <body>
-<div class="content grid-container" layout="column" layout-margin layout-fill layout-padding>
-    <div flex>
-        <md-content ng-view flex layout-padding></md-content>
-    </div>
+<!--<div class="content grid-container" layout="column" layout-margin layout-fill layout-padding>-->
+
+<div layout="column" layout-fill >
+
+    <md-content ui-view flex layout-padding></md-content>
+
 
     <div ng-controller="FooterCtrl" class="footer">Chiasm Playground, Version: {{version}}
         <a href="#/imprint">[Imprint]</a>
