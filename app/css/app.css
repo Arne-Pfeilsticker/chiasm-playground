@@ -71,10 +71,8 @@ input {
   /*border-color: #102030;*/
 /*}*/
 
-.btn:hover, .btn:focus, .btn:active  {
-  color: #fff;
-  border-color: #102030;
-  background-color: #506070;
+.md-list-item-inner  {
+  color: black;
 }
 
 .dark-blue-bg {

@@ -80,17 +80,29 @@ app.config(['$provide', '$mdThemingProvider', function ($provide, $mdThemingProv
 app.constant('VERSION', require('../../package.json').version);
 
 require('./layout');
+require('./home');
 require('./imprint');
 require('./todo-list');
 
 app.config(function ($stateProvider, $urlRouterProvider) {
     //
     // For any unmatched url, redirect to /state1
-    $urlRouterProvider.otherwise('/todos');
+    $urlRouterProvider.otherwise('/');
     //
     // Now set up the states
 
-    $stateProvider.state('todos', {
+    $stateProvider
+        .state('home', {
+            url: '/',
+            templateUrl: 'features/home/home.html',
+            controller: 'HomeController',
+            controllerAs: 'vm',
+            data: {
+                property1: 'foo',
+                property2: 'bar'
+            }
+        })
+        .state('todos', {
             url: '/todos',
             templateUrl: 'features/todo-list/todos.html',
             controller: 'TodoCtrl'

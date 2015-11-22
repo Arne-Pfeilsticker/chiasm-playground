@@ -10,14 +10,16 @@
             </md-toolbar-filler>
 
             <div layout-fill>
-                <h2 ng-style="{background:vm.mdThemeColors.primary.hue2}" class="md-display-1" style="margin: 0;color: white;" hide-sm layout-padding>
+                <h2 class="md-display-1" ng-style="{background:vm.mdThemeColors.primary.hue2}"
+                    style="margin: 0;color: white;" hide-sm layout-padding>
                     Chiasm Playground
                 </h2>
 
                 <md-menu-bar>
                     <button ui-sref="home">
-                        Start
+                        Home
                     </button>
+
                     <md-menu>
                         <button ng-click="$mdOpenMenu($event)">
                             Todo List
@@ -30,19 +32,11 @@
                             </md-menu-item>
                         </md-menu-content>
                     </md-menu>
-                    <md-menu>
-                        <button ng-click="$mdOpenMenu($event)">
-                            Imprint
-                        </button>
-                        <md-menu-content>
-                            <md-menu-item>
-                                <md-button ui-sref="imprint" aria-label="imprint">
-                                    Imprint
-                                </md-button>
-                            </md-menu-item>
-                        </md-menu-content>
-                    </md-menu>
+                    <button ui-sref="imprint" aria-label="imprint">
+                        Imprint
+                    </button>
                 </md-menu-bar>
+
             </div>
         </div>
     </md-toolbar>
