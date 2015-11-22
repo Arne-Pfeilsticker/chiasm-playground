@@ -2,13 +2,20 @@
 
 This is my playground to learn and test Curran's [Chiasm](https://github.com/chiasm-project/chiasm) - A browser based 
 environment for interactive data visualizations.
+
+The goal is to bring the individual isolated chiasmus examples into an overall context of a SPA. 
+In addition, design patterns for such applications are to be found.
+First of all I am just trying to bring the Chiasm examples to run in the overall context.
  
-I more or less take his examples and combine them with technologies like:
+I more or less take Chiasm examples and combine them with technologies like:
 * AngularJs
 * Angular Material
 * Browerify
-* OrientDB
-* gulp
+* Gulp
+* Karma
+
+Planed:
+* OrientDB (Graph database)
 * etc.
 
 ## Technological details
