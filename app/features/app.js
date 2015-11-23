@@ -42,10 +42,10 @@ app.config(['$provide', '$mdThemingProvider', function ($provide, $mdThemingProv
 
             var getColorFactory = function (intent) {
                 return function () {
-                    var colors = $mdThemingProvider._THEMES['default'].colors[intent];
+                    var colors = $mdThemingProvider._THEMES.default.colors[intent];
                     var name = colors.name;
                     // Append the colors with links like hue-1, etc
-                    colorStore[name].default = colorStore[name][colors.hues['default']];
+                    colorStore[name].default = colorStore[name][colors.hues.default];
                     colorStore[name].hue1 = colorStore[name][colors.hues['hue-1']];
                     colorStore[name].hue2 = colorStore[name][colors.hues['hue-2']];
                     colorStore[name].hue3 = colorStore[name][colors.hues['hue-3']];
@@ -84,6 +84,7 @@ require('./home');
 require('./imprint');
 require('./todo-list');
 require('./chiasm/magic-bar-chart');
+require('./chiasm/chiasm-charts');
 
 app.config(function ($stateProvider, $urlRouterProvider) {
     //
@@ -108,6 +109,11 @@ app.config(function ($stateProvider, $urlRouterProvider) {
             templateUrl: 'features/chiasm/magic-bar-chart/magic-bar-chart.html',
             controller: 'MagicBarChartController',
             controllerAs: 'vm'
+        })
+        .state('chiasmcharts', {
+            url: '/chiasmcharts',
+            templateUrl: 'features/chiasm/chiasm-charts/chiasm-charts.html',
+            controller: 'ChiasmChartsController'
         })
         .state('todos', {
             url: '/todos',
