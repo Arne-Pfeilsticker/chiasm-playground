@@ -85,6 +85,7 @@ require('./imprint');
 require('./todo-list');
 require('./chiasm/magic-bar-chart');
 require('./chiasm/chiasm-charts');
+require('./chiasm/bootstrap-chiasm');
 
 app.config(function ($stateProvider, $urlRouterProvider) {
     //
@@ -114,6 +115,11 @@ app.config(function ($stateProvider, $urlRouterProvider) {
             url: '/chiasmcharts',
             templateUrl: 'features/chiasm/chiasm-charts/chiasm-charts.html',
             controller: 'ChiasmChartsController'
+        })
+        .state('bootstrapchiasm', {
+            url: '/bootstrapchiasm',
+            templateUrl: 'features/chiasm/bootstrap-chiasm/bootstrap-chiasm.html',
+            controller: 'BootstrapChiasmController'
         })
         .state('todos', {
             url: '/todos',

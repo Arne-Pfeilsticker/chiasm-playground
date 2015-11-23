@@ -20,9 +20,10 @@
 <body md-theme='default'>
 
 <!--<div ui-view="menu"></div>-->
-<div ng-include="'features/layout/menu.html'"></div>
+
 
 <div layout="column" layout-fill >
+    <div ng-include="'features/layout/menu.html'"></div>
 
     <md-content ui-view flex layout-padding></md-content>
 

@@ -13,6 +13,17 @@ body {
     bottom: 10px;
 }
 
+.vis-container{
+    background-color: #90EE90;
+    border-radius: 20px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    height: 229px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
 /* Axis CSS from bar chart example http://bl.ocks.org/mbostock/3885304 */
 .axis {
     font: 10px sans-serif;
