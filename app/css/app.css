@@ -1,8 +1,8 @@
-body {
-    /*background-color: #ddd;*/
-    font: 14px "Roboto", Helvetica, Arial, sans-serif;
-    /*padding: 20px;*/
-}
+/*body {*/
+/*!*background-color: #ddd;*!*/
+/*font: 12px "Roboto", Helvetica, Arial, sans-serif;*/
+/*!*padding: 20px;*!*/
+/*}*/
 
 #container {
     background-color: white;
@@ -25,22 +25,22 @@ body {
 }
 
 /* Axis CSS from bar chart example http://bl.ocks.org/mbostock/3885304 */
-.axis {
-    font: 10px sans-serif;
-}
+/*.axis {*/
+/*font: 10px sans-serif;*/
+/*}*/
 
-.axis path,
-.axis line {
-    fill: none;
-    stroke: #000;
-    shape-rendering: crispEdges;
-}
+/*.axis path,*/
+/*.axis line {*/
+/*fill: none;*/
+/*stroke: #000;*/
+/*shape-rendering: crispEdges;*/
+/*}*/
 
-/* Custom CSS for axis labels. */
-.axis-label {
-    text-anchor: middle;
-    font-size: 1.3em;
-}
+/*!* Custom CSS for axis labels. *!*/
+/*.axis-label {*/
+/*text-anchor: middle;*/
+/*font-size: 1.3em;*/
+/*}*/
 
 /**
 * Angular Material Design
@@ -55,10 +55,14 @@ md-toolbar-filler {
     color: white;
 }
 
+md-radio-button {
+    display: inline;
+}
+
 #chiasm-container {
     height: 500px;
     padding: 0;
-    position: absolute;
+    position: relative;
 }
 
 /* Style the brush. Draws from http://bl.ocks.org/mbostock/4343214 */

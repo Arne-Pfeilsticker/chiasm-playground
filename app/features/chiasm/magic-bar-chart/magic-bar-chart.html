@@ -15,15 +15,11 @@
             <form>
                 <md-toolbar>
                     <div class="md-toolbar-tools">
-
-                        <h2>
-                            <span>Bar Chart configuration</span>
-                        </h2>
-
+                        <h2><span>Bar Chart configuration</span></h2>
                     </div>
                 </md-toolbar>
 
-                <md-content class="md-whiteframe-z1" layout="column" layout-padding layout-align="space-between left"
+                <div class="md-whiteframe-z1" layout="column" layout-padding layout-align="space-between left"
                             layout-sm="column">
 
                     <div layout="row">
@@ -66,12 +62,11 @@
 
                     <!-- Orientation radio buttons -->
 
-                    <md-radio-group ng-model="params.orientation">
-                        <div flex layout="row" layout-align="center center">
-                            <label control-label>Orientation:</label>
-                            <md-radio-button value="horizontal" class="md-primary">Horizontal</md-radio-button>
-                            <md-radio-button value="vertical">Vertical</md-radio-button>
-                        </div>
+
+                    <md-radio-group  ng-model="params.orientation" layout="row" layout-align="center left">
+                        <label for="orientation">Orientation:</label>
+                        <md-radio-button id="orientation" value="horizontal">Horizontal</md-radio-button>
+                        <md-radio-button value="vertical">Vertical</md-radio-button>
                     </md-radio-group>
 
                     <!-- Color picker -->
@@ -84,7 +79,7 @@
 
                     </div>
 
-                </md-content>
+                </div>
             </form>
         </div>
 
@@ -98,7 +93,7 @@
     </div>
 
     <div id="readme" class="blob instapaper_body">
-        <article class="markdown-body entry-content" itemprop="mainContentOfPage"><p>This example shows one way to add a
+        <article class="markdown-body entry-content"><p>This example shows one way to add a
             user interface on top of a <a href="https://github.com/chiasm-project/chiasm">Chiasm</a> application (using
             AngularJS and Angular Material).
             Every time an interaction is performed with the widgets on the left, a new Chiasm configuration is generated
