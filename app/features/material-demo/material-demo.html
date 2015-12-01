@@ -1,0 +1,238 @@
+<div class="dialogdemoBasicUsage">
+    <md-toolbar>
+        <div class="md-toolbar-tools">
+            <span class="md-flex">Toolbar:</span>
+        </div>
+    </md-toolbar>
+    <md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left">
+        <md-toolbar>
+            <h1 class="md-toolbar-tools">Sidenav Left</h1>
+        </md-toolbar>
+        <md-content class="md-padding" ng-controller="LeftCtrl">
+            <md-button ng-click="close()" class="md-primary">
+                Close Sidenav Left
+            </md-button>
+        </md-content>
+    </md-sidenav>
+    <md-content class="full" ng-controller="DialogBottomCtrl">
+        <section layout="vertical" layout-sm="horizontal" layout-align="center center">
+            <md-list>
+                <md-list-item>
+
+                    Open a dialog over the app's content. Press escape or click outside to close the dialog.
+
+                </md-list-item>
+                <md-list-item layout="row" layout-align="start start">
+                    <md-button class="md-raised" ng-click="showConfirm($event)">
+                        Open Dialog
+                    </md-button>
+                    <md-button class="md-raised" ng-click="toggleLeft($event)">
+                        Open Left Nav
+                        <md-tooltip>Will open left nav</md-tooltip>
+                    </md-button>
+                </md-list-item>
+                <md-divider></md-divider>
+                <md-list-item>
+                    <md-radio-group ng-model="data.group1">
+                        <md-radio-button value="Apple" class="md-primary">Apple</md-radio-button>
+                        <md-radio-button value="Banana"> Banana</md-radio-button>
+                        <md-radio-button value="Mango">Mango</md-radio-button>
+                    </md-radio-group>
+                </md-list-item>
+                <md-divider></md-divider>
+
+            </md-list>
+        </section>
+    </md-content>
+</div>
+
+<md-content ng-controller="ButtonCtrl">
+    <section layout="vertical" layout-sm="horizontal" layout-align="center center">
+        <md-button>{{title1}}</md-button>
+        <md-button md-no-ink class="md-primary">Primary (noink)</md-button>
+        <md-button ng-disabled="isDisabled" class="md-primary">Disabled</md-button>
+        <md-button class="md-warn" ng-click="isDisabled = !isDisabled">{{title4}}</md-button>
+        <div class="label">flat</div>
+    </section>
+
+    <section layout="vertical" layout-sm="horizontal" layout-align="center center">
+        <md-button class="md-raised">Button</md-button>
+        <md-button class="md-raised md-primary">Primary</md-button>
+        <md-button ng-disabled="true" class="md-raised md-primary">Disabled</md-button>
+        <md-button class="md-raised md-warn">Warn</md-button>
+        <div class="label">raised</div>
+    </section>
+
+    <section layout="vertical" layout-sm="horizontal" layout-align="center center">
+        <md-button class="md-fab" aria-label="Time">
+            <md-icon md-svg-src="features/material-demo/img/icons/ic_access_time_24px.svg"
+                     style="width: 24px; height: 24px;"></md-icon>
+            <md-tooltip>Time</md-tooltip>
+        </md-button>
+
+        <md-button class="md-fab" aria-label="New document">
+            <md-tooltip>New Document</md-tooltip>
+            <md-icon md-svg-src="features/material-demo/img/icons/ic_insert_drive_file_24px.svg"
+                     style="width: 24px; height: 24px;"></md-icon>
+        </md-button>
+
+        <md-button class="md-fab" disabled aria-label="Comment">
+            <md-icon md-svg-src="features/material-demo/img/icons/ic_comment_24px.svg"
+                     style="width: 24px; height: 24px;"></md-icon>
+            <md-tooltip>Comment</md-tooltip>
+        </md-button>
+
+        <md-button class="md-fab md-primary" aria-label="Profile">
+            <md-icon md-svg-src="features/material-demo/img/icons/ic_people_24px.svg"
+                     style="width: 24px; height: 24px;"></md-icon>
+            <md-tooltip>Profile</md-tooltip>
+        </md-button>
+        <div class="label">FAB</div>
+    </section>
+
+    <section layout="vertical" layout-sm="horizontal" layout-align="center center">
+        <md-button ng-href="{{googleUrl}}" target="_blank">Go to Google</md-button>
+        <md-button>RSVP</md-button>
+        <div class="label">Button Group</div>
+    </section>
+
+    <section layout="vertical" layout-sm="horizontal" layout-align="center center">
+        <md-button class="md-primary">Button</md-button>
+        <md-button class="md-primary md-raised">Button</md-button>
+        <md-button class="md-primary md-raised">Button</md-button>
+        <md-button class="md-primary">Button</md-button>
+        <div class="label">Themed</div>
+    </section>
+
+    <section>
+        <div ng-controller="AppCtrl" class="md-padding checkboxdemoSyncing" ng-cloak="" style="height:250px">
+            <div layout="row" layout-wrap="" layout-align="start center">
+
+                <div flex="100" flex-gt-sm="50" layout="column">
+                    <fieldset class="standard" flex="">
+                        <legend>Using <code>md-checkbox</code> with <code>ng-checked</code></legend>
+                        <div layout="row" layout-wrap="" flex="">
+                            <div flex="50" ng-repeat="item in items">
+                                <md-checkbox ng-checked="exists(item, selected)" ng-click="toggle(item, selected)">
+                                    {{ item }} <span ng-if="exists(item, selected)">selected</span>
+                                </md-checkbox>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+
+                <div flex="100" flex-gt-sm="50" layout="column">
+                    <fieldset class="standard" flex="">
+                        <legend>Using <code>&lt;input type="checkbox"&gt;</code></legend>
+                        <div layout="row" layout-wrap="" flex="">
+                            <div ng-repeat="item in items" class="standard" flex="50">
+                                <label>
+                                    <input ng-checked="exists(item, selected)" ng-click="toggle(item, selected)"
+                                           type="checkbox">
+                                    {{ item }}
+                                </label>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+
+            </div>
+
+            <h2 class="md-title">Selected Items</h2>
+            <code style="display: block; padding: 8px;">{{selected | json}}</code>
+
+        </div>
+    </section>
+</md-content>
+
+<div class="buttondemoBasicUsage" ng-controller="ButtonsDemo1Ctrl" ng-cloak="">
+    <md-content>
+
+        <section layout="row" layout-sm="column" layout-align="center center" layout-wrap="">
+            <md-button>{{title1}}</md-button>
+            <md-button md-no-ink="" class="md-primary">Primary (md-noink)</md-button>
+            <md-button ng-disabled="true" class="md-primary">Disabled</md-button>
+            <md-button class="md-warn">{{title4}}</md-button>
+            <div class="label">Flat</div>
+        </section>
+
+        <section layout="row" layout-sm="column" layout-align="center center" layout-wrap="">
+            <md-button class="md-raised">Button</md-button>
+            <md-button class="md-raised md-primary">Primary</md-button>
+            <md-button ng-disabled="true" class="md-raised md-primary">Disabled</md-button>
+            <md-button class="md-raised md-warn">Warn</md-button>
+            <div class="label">Raised</div>
+        </section>
+
+        <section layout="row" layout-sm="column" layout-align="center center" layout-wrap="">
+            <md-button class="md-fab" aria-label="Eat cake">
+                <md-icon md-svg-src="features/material-demo/img/icons/cake.svg"></md-icon>
+            </md-button>
+
+            <md-button class="md-fab md-primary" aria-label="Use Android">
+                <md-icon md-svg-src="features/material-demo/img/icons/android.svg"></md-icon>
+            </md-button>
+
+            <md-button class="md-fab" ng-disabled="true" aria-label="Comment">
+                <md-icon md-svg-src="features/material-demo/img/icons/ic_comment_24px.svg"></md-icon>
+            </md-button>
+
+            <md-button class="md-fab md-primary md-hue-2" aria-label="Profile">
+                <md-icon md-svg-src="features/material-demo/img/icons/ic_people_24px.svg"></md-icon>
+            </md-button>
+
+            <md-button class="md-fab md-mini" aria-label="Eat cake">
+                <md-icon md-svg-src="features/material-demo/img/icons/cake.svg"></md-icon>
+            </md-button>
+
+            <md-button class="md-fab md-mini md-primary" aria-label="Use Android">
+                <md-icon md-svg-src="features/material-demo/img/icons/android.svg" style="color: greenyellow;"></md-icon>
+            </md-button>
+            <div class="label">FAB</div>
+        </section>
+
+        <section layout="row" layout-sm="column" layout-align="center center" layout-wrap="">
+            <md-button ng-href="{{googleUrl}}" target="_blank">Default Link</md-button>
+            <md-button class="md-primary" ng-href="{{googleUrl}}" target="_blank">Primary Link</md-button>
+
+            <md-button>Default Button</md-button>
+            <div class="label">Link vs. Button</div>
+        </section>
+
+        <section layout="row" layout-sm="column" layout-align="center center" layout-wrap="">
+            <md-button class="md-primary md-hue-1">Primary Hue 1</md-button>
+            <md-button class="md-warn md-raised md-hue-2">Warn Hue 2</md-button>
+            <md-button class="md-accent">Accent</md-button>
+            <md-button class="md-accent md-raised md-hue-1">Accent Hue 1</md-button>
+            <div class="label">Themed</div>
+        </section>
+
+        <section layout="row" layout-sm="column" layout-align="center center" layout-wrap="">
+            <md-button class="md-icon-button md-primary" aria-label="Settings">
+                <md-icon md-svg-icon="features/material-demo/img/icons/menu.svg"></md-icon>
+            </md-button>
+            <md-button class="md-icon-button md-accent" aria-label="Favorite">
+                <md-icon md-svg-icon="features/material-demo/img/icons/favorite.svg"></md-icon>
+            </md-button>
+            <md-button class="md-icon-button" aria-label="More">
+                <md-icon md-svg-icon="features/material-demo/img/icons/more_vert.svg"></md-icon>
+            </md-button>
+            <md-button href="http://google.com" title="Launch Google.com in new window" target="_blank" ng-disabled="true" aria-label="Google.com" class="md-icon-button launch">
+                <md-icon md-svg-icon="features/material-demo/img/icons/launch.svg"></md-icon>
+            </md-button>
+            <div class="label">Icon Button</div>
+        </section>
+    </md-content>
+</div>
+
+<div ng-controller="BottomSheetExample" class="bottomSheetdemoBasicUsage">
+    <div class="bottom-sheet-demo inset" layout="column" layout-sm="row" layout-align="center">
+        <md-button class="md-primary" ng-click="showListBottomSheet($event)">
+            Show as List
+        </md-button>
+    </div>
+    <br/>
+    <b layout="row" layout-align="center center" layout-margin>
+        {{alert}}
+    </b>
+</div>

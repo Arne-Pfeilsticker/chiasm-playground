@@ -5,12 +5,14 @@ require('es5-sham');
 
 require('jquery');
 var angular = require('angular');
-require('angular-ui-router');
-require('angular-animate');
-require('angular-aria');
-require('angular-material');
+//require('angular-ui-router');
+//require('angular-animate');
+//require('angular-aria');
+var Hammer = require('hammerjs');
+//require('angular-material');
 
-var app = angular.module('chiasmApp', ['ui.router', 'ngAnimate', 'ngAria', 'ngMaterial']);
+//var app = angular.module('chiasmApp', ['ui.router', 'ngAnimate', 'ngAria', 'ngMaterial']);
+var app = angular.module('chiasmApp', [require('angular-ui-router'), require('angular-material') ]);
 
 app.config(['$provide', '$mdThemingProvider', function ($provide, $mdThemingProvider) {
 
@@ -86,6 +88,7 @@ require('./todo-list');
 require('./chiasm/magic-bar-chart');
 require('./chiasm/chiasm-charts');
 require('./chiasm/bootstrap-chiasm');
+require('./material-demo');
 
 app.config(function ($stateProvider, $urlRouterProvider) {
     //
@@ -95,6 +98,12 @@ app.config(function ($stateProvider, $urlRouterProvider) {
     // Now set up the states
 
     $stateProvider
+        .state('menu', {
+            url: '/menu',
+            templateUrl: 'features/layout/menu.html',
+            controller: 'MenuController',
+            controllerAs: 'vm'
+        })
         .state('home', {
             url: '/',
             templateUrl: 'features/home/home.html',
@@ -126,11 +135,13 @@ app.config(function ($stateProvider, $urlRouterProvider) {
             templateUrl: 'features/todo-list/todos.html',
             controller: 'TodoCtrl'
         })
-        .state('menu', {
-            url: '/menu',
-            templateUrl: 'features/layout/menu.html',
-            controller: 'MenuController',
-            controllerAs: 'vm'
+        .state('materialdemo', {
+            url: '/materialdemo',
+            templateUrl: 'features/material-demo/material-demo.html'
+        })
+        .state('materialdemobsl', {
+            url: '/materialdemobsl',
+            templateUrl: 'features/material-demo/bottom-sheet-list-template.html'
         })
         .state('imprint', {
             url: '/imprint',
