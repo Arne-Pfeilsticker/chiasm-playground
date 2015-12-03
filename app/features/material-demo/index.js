@@ -9,3 +9,4 @@ app.controller('LeftCtrl', require('./material-demo.controllers').LeftCtrl);
 app.controller('BottomSheetExample', require('./material-demo.controllers').BottomSheetExample);
 app.controller('ListBottomSheetCtrl', require('./material-demo.controllers').ListBottomSheetCtrl);
 app.controller('ButtonsDemo1Ctrl', require('./material-demo.controllers').ButtonsDemo1Ctrl);
+app.controller('CheckboxDemo1Ctrl', require('./material-demo.controllers').CheckboxDemo1Ctrl);

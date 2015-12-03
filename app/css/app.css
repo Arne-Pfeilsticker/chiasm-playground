@@ -1,19 +1,63 @@
-/*body {*/
-/*!*background-color: #ddd;*!*/
-/*font: 12px "Roboto", Helvetica, Arial, sans-serif;*/
-/*!*padding: 20px;*!*/
-/*}*/
+/* layout */
+.footer {
+    font-size: small;
+    width: 100%;
+    text-align: center;
+}
 
-#container {
+
+/* Chiasm Examples */
+/* Magic Bar Charts */
+
+.magicBarCharts #chiasm-container {
+    height: 500px;
     background-color: white;
-    position: absolute;
+    position: relative;
+    left: 20px;
+    right: 20px;
+    top: 20px;
+    bottom: 20px;
+}
+
+/* Style the brush. Draws from http://bl.ocks.org/mbostock/4343214 */
+.magicBarCharts .brush .extent {
+    stroke: black;
+    fill-opacity: .2;
+    shape-rendering: crispEdges;
+}
+
+/* Chiasm Charts */
+
+.chiasmCharts #container {
+    background-color: white;
+    position: fixed;
     left:   10px;
     right:  10px;
     top:    10px;
     bottom: 10px;
 }
 
-.vis-container{
+/* Axis CSS from bar chart example http://bl.ocks.org/mbostock/3885304 */
+.chiasmCharts .axis {
+    font: 10px sans-serif;
+}
+
+.chiasmCharts .axis path,
+.chiasmCharts .axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+}
+
+/* Custom CSS for axis labels. */
+.chiasmCharts .axis-label {
+    text-anchor: middle;
+    font-size: 1.3em;
+}
+
+/* Bootstrap + Chiasm */
+
+.bootstrapChiasm .vis-container{
     background-color: #90EE90;
     border-radius: 20px;
     border-style: solid;
@@ -25,134 +69,146 @@
 }
 
 /* Axis CSS from bar chart example http://bl.ocks.org/mbostock/3885304 */
-/*.axis {*/
-/*font: 10px sans-serif;*/
-/*}*/
-
-/*.axis path,*/
-/*.axis line {*/
-/*fill: none;*/
-/*stroke: #000;*/
-/*shape-rendering: crispEdges;*/
-/*}*/
-
-/*!* Custom CSS for axis labels. *!*/
-/*.axis-label {*/
-/*text-anchor: middle;*/
-/*font-size: 1.3em;*/
-/*}*/
-
-/**
-* Angular Material Design
-**/
-md-toolbar-filler {
-    margin: 0;
-    color: white;
+.bootstrapChiasm .axis {
+    font: 10px sans-serif;
 }
 
-.md-toolbar-tools {
-    margin: 0;
-    color: white;
-}
-
-md-radio-button {
-    display: inline;
-}
-
-#chiasm-container {
-    height: 500px;
-    padding: 0;
-    position: relative;
-}
-
-/* Style the brush. Draws from http://bl.ocks.org/mbostock/4343214 */
-.brush .extent {
-    stroke: black;
-    fill-opacity: .2;
-    shape-rendering: crispEdges;
-}
-
-.widget-container {
-    margin-top: 30px;
-}
-
-.axis {
-    font-family: 'Montserrat', sans-serif;
-}
-
-.axis text {
-    font-size: 12pt;
-}
-
-.axis .label {
-    font-size: 24pt;
-}
-
-.axis path,
-.axis line {
+.bootstrapChiasm .axis path,
+.bootstrapChiasm .axis line {
     fill: none;
-    stroke: gray;
-    stroke-width: 1px;
+    stroke: #000;
     shape-rendering: crispEdges;
 }
 
-.md-display-2 {
+/* Custom CSS for axis labels. */
+.bootstrapChiasm .axis-label {
+    text-anchor: middle;
+    font-size: 1.3em;
+}
+
+
+/* Material Demo */
+/* Button Demo Basic Usage */
+
+.buttondemoBasicUsage section {
+    background: #f7f7f7;
+    border-radius: 3px;
+    text-align: center;
+    margin: 1em;
+    position: relative !important;
+    padding-bottom: 10px;
+}
+
+.buttondemoBasicUsage md-content {
+    margin-right: 7px;
+}
+
+.buttondemoBasicUsage section .md-button {
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.buttondemoBasicUsage .label {
+    position: absolute;
+    bottom: 5px;
+    left: 7px;
+    font-size: 14px;
+    opacity: 0.54;
+}
+
+/* Checkbox Demo Syncing */
+
+.checkboxdemoSyncing .checkboxDemo1 div {
+    clear: both;
+}
+
+.checkboxdemoSyncing .checkboxDemo1 md-checkbox {
+    float: left;
+    background-color: transparent;
+}
+
+.checkboxdemoSyncing legend {
+    color: #3F51B5;
+}
+
+.checkboxdemoSyncing legend code {
+    color: #3F51B5;
+    font-weight: normal;
+}
+
+.checkboxdemoSyncing p {
+    padding-left: 8px;
+}
+
+.checkboxdemoSyncing .info {
+    padding-left: 13px;
+}
+
+.checkboxdemoSyncing div.standard {
+    padding: 8px;
+    padding-left: 15px;
+}
+
+.checkboxdemoSyncing fieldset.standard {
+    border-style: solid;
+    border-width: 1px;
+    height: 100%;
+}
+
+/* Todo List */
+.todoList .md-display-2 {
     margin-bottom: 0;
 }
 
-
-
-
-img {
+.todoList img {
     vertical-align: middle;
 }
 
-input {
+.todoList input {
     font: inherit;
     margin: 0;
 }
 
-.span-save {
+.todoList .span-save {
     text-decoration: none;
     vertical-align: middle;
 }
 
-.margins {
+.todoList .margins {
     margin-top: 2px;
     margin-bottom: 3px;
     margin-left: 3px;
     margin-right: 3px;
 }
 
-.padding {
+.todoList .padding {
     padding-top: 2px;
     padding-bottom: 2px;
     padding-left: 7px;
 }
 
-.rounded-box {
+.todoList .rounded-box {
     border-width: 0;
     border-radius: 4px;
 }
 
-
-.md-list-item-inner {
+.todoList .md-list-item-inner {
     color: black;
 }
 
-.dark-blue-bg {
+.todoList .dark-blue-bg {
     background-color: #0d24c6;
 }
 
-.medium-blue-bg {
+.todoList .medium-blue-bg {
     background-color: #182ff5;
 }
 
-.text-on-blue {
+.todoList .text-on-blue {
     color: #e1e1e1;
 }
 
-.sidebar-heading {
+.todoList .sidebar-heading {
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;
     padding-top: 7px;
@@ -161,13 +217,13 @@ input {
     font-size: 1.3em;
 }
 
-.sidebar-heading-skin {
+.todoList .sidebar-heading-skin {
     border-bottom-style: solid;
     border-bottom-width: 1px;
     border-bottom-color: #071720;
 }
 
-.sidebar-item-borders {
+.todoList .sidebar-item-borders {
     color: inherit;
     border-top-width: 1px;
     border-top-style: solid;
@@ -179,13 +235,13 @@ input {
     border-left-width: 0;
 }
 
-.sidebar-item-borders:last-child {
+.todoList .sidebar-item-borders:last-child {
     border-bottom-width: 0;
     border-bottom-left-radius: 4px;
     border-bottom-right-radius: 4px;
 }
 
-.sidebar-item {
+.todoList .sidebar-item {
     display: block;
     padding: 5px 15px;
     position: relative;
@@ -193,24 +249,24 @@ input {
     text-decoration: inherit;
 }
 
-.sidebar-item-inactive {
+.todoList .sidebar-item-inactive {
     cursor: pointer;
 }
 
 /* highlight hovered item a bit... */
-a:hover.sidebar-item {
+.todoList a:hover.sidebar-item {
     color: #eee;
     text-decoration: inherit;
 }
 
 /* ...but not if it is already selected */
-a:hover.sidebar-item-active {
+.todoList a:hover.sidebar-item-active {
     color: inherit;
     text-decoration: inherit;
 }
 
 /* needs to be defined after sidebar-item */
-.sidebar-item-active {
+.todoList .sidebar-item-active {
     font-weight: bold;
     border-top-color: #031017;
     border-bottom-color: #203040;
@@ -220,104 +276,24 @@ a:hover.sidebar-item-active {
 }
 
 /* in headline */
-.current-item {
+.todoList .current-item {
     font-size: 18px;
     font-weight: bold;
     height: 28px;
     line-height: 36px;
 }
 
-.current-item-edit {
+.todoList .current-item-edit {
     width: 80%;
     color: #333;
     line-height: 18px;
 }
 
-.todo-text {
+.todoList .todo-text {
     height: 200px;
     background-color: #eee;
 }
 
-.todo-text-edit {
+.todoList .todo-text-edit {
     width: 97%;
 }
-
-.footer {
-    font-size: small;
-    width: 100%;
-    text-align: center;
-}
-
-/** From vulcanized demo **/
-
-.dialogdemoBasicUsage .full {
-    width: 100%;
-    height: 100%; }
-
-section {
-    background: #f7f7f7;
-    border-radius: 3px;
-    text-align: left;
-    margin: 1em;
-    position: relative !important;
-    padding-bottom: 10px;
-}
-md-content {
-    margin-right: 7px;
-}
-section .md-button:not(.md-fab) {
-    width: 10em;
-}
-section .md-button {
-    display: block;
-    margin: 1em;
-    line-height: 25px;
-}
-.label {
-    position: absolute;
-    bottom: 5px;
-    left: 7px;
-    color: #ccc;
-    font-size: 14px;
-}
-
-.buttondemoBasicUsage section {
-    background: #f7f7f7;
-    border-radius: 3px;
-    text-align: center;
-    margin: 1em;
-    position: relative !important;
-    padding-bottom: 10px; }
-.buttondemoBasicUsage md-content {
-    margin-right: 7px; }
-.buttondemoBasicUsage section .md-button {
-    margin-top: 16px;
-    margin-bottom: 16px; }
-.buttondemoBasicUsage .label {
-    position: absolute;
-    bottom: 5px;
-    left: 7px;
-    font-size: 14px;
-    opacity: 0.54; }
-
-
-.checkboxdemoSyncing .checkboxDemo1 div {
-    clear: both; }
-.checkboxdemoSyncing .checkboxDemo1 md-checkbox {
-    float: left; }
-.checkboxdemoSyncing legend {
-    color: #3F51B5; }
-.checkboxdemoSyncing legend code {
-    color: #3F51B5;
-    font-weight: normal; }
-.checkboxdemoSyncing p {
-    padding-left: 8px; }
-.checkboxdemoSyncing .info {
-    padding-left: 13px; }
-.checkboxdemoSyncing div.standard {
-    padding: 8px;
-    padding-left: 15px; }
-.checkboxdemoSyncing fieldset.standard {
-    border-style: solid;
-    border-width: 1px;
-    height: 100%; }

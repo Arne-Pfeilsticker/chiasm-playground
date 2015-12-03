@@ -1,4 +1,4 @@
-<div layout="column" layout-margin layout-fill layout-align="center left">
+<div layout="column" class="bootstrapChiasm" layout-margin layout-fill layout-align="center left">
     <div flex>
         <h1 class="md-display-2"><s>Bootstrap</s> Material + Chiasm</h1>
 
@@ -6,9 +6,12 @@
             Drawn from Curren's <a href="http://bl.ocks.org/curran/bfc75d0fcc68b2d341f5">Bootstrap + Chiasm</a>.
             But Bootstrap is substituted by Angular Material.
         </p>
-
     </div>
+
     <div layout="row" layout-fill layout-padding layout-sm="column">
+        <div flex>
+            In this example, each graphic is living in its own div-container.
+        </div>
         <div flex>
             <div id="scatterplot-container" class="vis-container"></div>
         </div>
@@ -19,15 +22,10 @@
             <div id="pie-chart-container" class="vis-container"></div>
         </div>
     </div>
-    In this example, each graphic is living in its own div-container.
+
     <div layout="row" layout-fill layout-padding>
         <div flex>
             <div id="line-chart-container" class="vis-container"></div>
         </div>
     </div>
-    <md-radio-group  ng-model="params.orientation" layout="row" layout-align="center left">
-        <label for="orientation">Orientation:</label>
-        <md-radio-button id="orientation" value="horizontal">Horizontal</md-radio-button>
-        <md-radio-button value="vertical">Vertical</md-radio-button>
-    </md-radio-group>
 </div>

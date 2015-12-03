@@ -5,20 +5,35 @@ require('es5-sham');
 
 require('jquery');
 var angular = require('angular');
-//require('angular-ui-router');
-//require('angular-animate');
-//require('angular-aria');
-var Hammer = require('hammerjs');
-//require('angular-material');
+var Hammer = require('hammerjs');  // I do not really know if that's so right.
 
-//var app = angular.module('chiasmApp', ['ui.router', 'ngAnimate', 'ngAria', 'ngMaterial']);
 var app = angular.module('chiasmApp', [require('angular-ui-router'), require('angular-material') ]);
 
-app.config(['$provide', '$mdThemingProvider', function ($provide, $mdThemingProvider) {
+app.config(['$provide', '$mdThemingProvider', '$mdIconProvider', function ($provide, $mdThemingProvider, $mdIconProvider) {
 
+    $mdIconProvider
+        //.iconSet('action', './images/icons/action-icons.svg', 24)
+        //.iconSet('alert', './images/icons/alert-icons.svg', 24)
+        //.iconSet('av', './images/icons/av-icons.svg', 24)
+        //.iconSet('communication', './images/icons/communication-icons.svg', 24)
+        //.iconSet('content', './images/icons/content-icons.svg', 24)
+        //.iconSet('device', './images/icons/device-icons.svg', 24)
+        //.iconSet('editor', './images/icons/editor-icons.svg', 24)
+        //.iconSet('file', './images/icons/file-icons.svg', 24)
+        //.iconSet('hardware', './images/icons/hardware-icons.svg', 24)
+        //.iconSet('icons', './images/icons/icons-icons.svg', 24)
+        //.iconSet('image', './images/icons/image-icons.svg', 24)
+        //.iconSet('maps', './images/icons/maps-icons.svg', 24)
+        .iconSet('navigation', 'images/icons/navigation-icons.svg', 24)
+        //.iconSet('notification', './images/icons/notification-icons.svg', 24)
+        //.iconSet('social', './images/icons/social-icons.svg', 24)
+        //.iconSet('toggle', './images/icons/toggle-icons.svg', 24)
+        //.icon('kommune', './images/icons/icon_kommune.png', 24)
+        //.icon('arrowright', './images/icons/arrow_right.svg', 150)
+    ;
 
     $mdThemingProvider.theme('default')
-        .primaryPalette('indigo')
+        .primaryPalette('green')
         .accentPalette('deep-orange');
 
     var colorStore = {};
