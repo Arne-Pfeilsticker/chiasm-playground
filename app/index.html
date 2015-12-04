@@ -19,14 +19,11 @@
 
 <body md-theme='default' ng-app="chiasmApp">
 
-<!--<div ui-view="menu"></div>-->
-
-
 <div layout="column" layout-fill >
+
     <div ng-include="'features/layout/menu.html'"></div>
 
     <md-content ui-view flex layout-padding></md-content>
-
 
     <div ng-controller="FooterCtrl" class="footer">Chiasm Playground, Version: {{version}}
         <a ui-sref="imprint">[Imprint]</a>

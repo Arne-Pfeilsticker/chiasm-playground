@@ -30,6 +30,7 @@ app.config(['$provide', '$mdThemingProvider', '$mdIconProvider', function ($prov
         //.iconSet('toggle', './images/icons/toggle-icons.svg', 24)
         //.icon('kommune', './images/icons/icon_kommune.png', 24)
         //.icon('arrowright', './images/icons/arrow_right.svg', 150)
+        .iconSet("avatars", 'images/icons/avatar-icons.svg',128)
     ;
 
     $mdThemingProvider.theme('default')

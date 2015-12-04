@@ -5,7 +5,6 @@
     text-align: center;
 }
 
-
 /* Chiasm Examples */
 /* Magic Bar Charts */
 
@@ -31,9 +30,9 @@
 .chiasmCharts #container {
     background-color: white;
     position: fixed;
-    left:   10px;
-    right:  10px;
-    top:    10px;
+    left: 10px;
+    right: 10px;
+    top: 10px;
     bottom: 10px;
 }
 
@@ -57,7 +56,7 @@
 
 /* Bootstrap + Chiasm */
 
-.bootstrapChiasm .vis-container{
+.bootstrapChiasm .vis-container {
     background-color: #90EE90;
     border-radius: 20px;
     border-style: solid;
@@ -85,7 +84,6 @@
     text-anchor: middle;
     font-size: 1.3em;
 }
-
 
 /* Material Demo */
 /* Button Demo Basic Usage */
@@ -124,7 +122,7 @@
 
 .checkboxdemoSyncing .checkboxDemo1 md-checkbox {
     float: left;
-    background-color: transparent;
+    background-color: transparent; /* Work around to avoid color spill over */
 }
 
 .checkboxdemoSyncing legend {
@@ -153,6 +151,48 @@
     border-style: solid;
     border-width: 1px;
     height: 100%;
+}
+
+/* Radio Button Demo Basic Usage */
+
+.radioButtondemoBasicUsage body {
+    padding: 20px;
+}
+
+.radioButtondemoBasicUsage hr {
+    margin-left: -20px;
+    opacity: 0.3;
+}
+
+.radioButtondemoBasicUsage md-radio-group {
+    width: 150px;
+}
+
+.radioButtondemoBasicUsage p:last-child {
+    padding-bottom: 50px;
+}
+
+.radioButtondemoBasicUsage [ng-controller] {
+    padding-left: 20px;
+}
+
+.radioButtondemoBasicUsage .radioValue {
+    margin-left: 5px;
+    color: #0f9d58;
+    font-weight: bold;
+    padding: 5px;
+}
+
+.radioButtondemoBasicUsage md-icon {
+    margin: 20px;
+    margin-top: 0;
+    width: 128px;
+    height: 128px;
+}
+
+.radioButtondemoBasicUsage .ipsum {
+    color: saddlebrown;
+    font-size: 0.9em;
 }
 
 /* Todo List */
